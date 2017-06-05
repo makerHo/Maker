@@ -1,0 +1,21 @@
+<div class="demo"></div>
+<script>
+// var demo=document.querySelector(".demo")
+// var weekday=new Date().getDay();
+// var week=new Array(
+// 			"日",
+// 			"一",
+// 			"二",
+// 			"三",
+// 			"四",
+// 			"五",
+// 			"六"			
+// 	)
+// demo.innerHTML="周"+week[weekday];
+var demo=document.querySelector(".demo");
+var d=new Date();
+// var now= new Date();
+var	weekday=d.getDay();
+var week=new Array("日","一","二","三","四","五","六")
+	demo.innerHTML="周"+week[weekday];
+</script>

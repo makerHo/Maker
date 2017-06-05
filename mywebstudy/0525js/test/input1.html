@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input{
+			/*background: red;*/
+		}
+	</style>
+</head>
+<body>
+<div class="backbar"></div>
+	<input type="text" id="username" placeholder=" Username"><br>
+	<input type="password" placeholder=" Password" id="pwd"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<input type="text"><br>
+	<script>
+	var inputs=document.querySelectorAll("input");
+var username=document.querySelector("#username");
+var backbar=document.querySelector(".backbar")
+	username.addEventListener("focus",function(){//获取焦点
+		this.style.background="lightyellow";
+		backbar.innerHTML="";
+	})
+	username.addEventListener("blur",function(){//失去焦点
+		this.style.background="#fff";
+		if(this.value==""){
+			backbar.innerHTML="Username not null"
+		}
+	})
+	inputs.forEach(function(value){
+		value.addEventListener("focus",function(){
+			this.style.background="lightyellow"//this?
+		})
+		value.addEventListener("blur",function(){//传值？
+			// this.style.background="#fff"
+			this.style.background="#fff";});
+		
+	})
+	var pwd=document.querySelector("#pwd");
+		pwd.addEventListener("keyup",function(){
+			if(this.value.length<6||this.value.length>12){
+				backbar.innerHTML="密码长度大于6，小于12"
+			}else{
+				backbar.innerHTML=""
+			}
+		})
+	</script>
+</body>
+</html>

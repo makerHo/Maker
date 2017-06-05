@@ -1,0 +1,12 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector(".demo");
+setInterval(function(){
+	//alert(333);
+	var d=new Date();
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var s=d.getSeconds();
+	demo.innerHTML=h+":"+m+":"+s;
+},1000);
+</script>

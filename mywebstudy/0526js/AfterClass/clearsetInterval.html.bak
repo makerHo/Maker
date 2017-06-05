@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <button class="btn">Button</button>
+  <script>
+		var btn=document.querySelector(".btn");//声明btn
+		var timer=window.setInterval(function(){
+		console.log(new Date().toLocaleTimeString()+"a")
+		},1000)
+		var timer2=window.setTimeout(function(){
+			console.log(new Date().toLocaleTimeString()+"b")
+		},1000);
+		btn.addEventListener("click",function(){
+			clearTimeout(timer);
+		})
+		//window.clearInterval与window.setInterval的用法(window.setInterval()功能：按照指定的周期（以毫秒计）来调用函数或计算表达式。语法：setInterval(code,millisec)
+  </script>
+ </body>
+</html>

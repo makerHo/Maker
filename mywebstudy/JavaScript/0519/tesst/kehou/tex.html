@@ -1,0 +1,11 @@
+<p>该实例使用 addEventListener() 方法来向按钮添加点击事件。</p>
+<button id="myBtn">点我</button>
+<p id="demo"></p>
+<script>
+var myBtn=document.querySelector(".myBtn");
+var demo= document.querySelector(".demo");
+myBtn.addEventListener("click", function()
+{
+   demo.innerHTML = "Hello World";
+});
+</script>

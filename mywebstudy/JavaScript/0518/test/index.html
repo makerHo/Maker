@@ -1,0 +1,32 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector('.demo');
+function times(){
+
+console.log(demo);
+ var d=new Date();
+ var h=d.getHours();
+ var m=d.getMinutes();
+ var s=d.getSeconds();
+ if (s<10) {
+ 	s="0"+s
+ }else{
+ 	s=s
+ }
+ demo.innerHTML=h+":"+m+":"+s;
+}
+setInterval(times,100);
+m=time.toLocaleTimeString();
+if (m.subString(0,2)<11) {
+	demo.innerHTML="早上好现在是："+m;
+	demo.document.style.bgColor="green";
+}else if (m.subString(0,2)<14) {
+	demo.innerHTML="中午好现在是："+m;
+	demo.document.style.bgColor="green";
+}else if (m.subString(0,2)<18) {
+	demo.innerHTML="中午好现在是："+m;
+	demo.document.style.bgColor="green";
+}else{
+	demo.innerHTML='现在是'
+}
+</script>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var str = "您好,我是http://www.baidu.com版您好，您好";
+	document.write(str+"<hr>");
+	var  pattern=/(http):\/\/(www)\.([a-z]+)\.*(com)/gm;
+		console.log(str.match(pattern));//[]表示一个字符，“+”这个表示量词，最少一个
+		document.write(str.replace(pattern,"<a href = '$1://$2.$3.$4'>$1://$2.$3.$4</a>"))
+	</script>
+</body>
+</html>

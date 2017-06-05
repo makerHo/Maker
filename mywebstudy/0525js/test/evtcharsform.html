@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		html{
+			background: #123;
+		}
+		body{
+			background: #cdf;
+		}
+	</style>
+</head>
+<body>
+	<button>button</button>
+	<script>
+	var btn=document.querySelector("button");
+	var body=document.querySelector("body");
+	var html=document.querySelector("html");
+	html.addEventListener("click",function(){
+		alert("html")
+	})
+	body.addEventListener("click",function(evt){
+		evt.stopPropagation();
+		alert("body")
+	})
+	btn.addEventListener("click",function(evt){
+		evt.stopPropagation();//组织默认动作 
+		alert("btn")
+	})
+	// btn.onclick=function(evt){
+	// 	var evt=window.Event;
+	// 	alert(evt);
+	// }//IE8以下有问题
+	</script>
+</body>
+</html>

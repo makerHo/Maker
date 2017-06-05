@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var str="捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕http://www.hao.com获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性http://www.baidu.com分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性http://www.qq.com分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组捕获性分组"
+	document.write(str+"<hr>");
+	var pattern=/(http):\/\/(www)\.([a-z]+)\.(com)/gm;
+	// console.log(str.match(pattern));
+	document.write(str.replace(pattern,"<a href='$1://$2.$3.$4'>$1://$2.$3.$4</a>"))
+	</script>
+</body>
+</html>

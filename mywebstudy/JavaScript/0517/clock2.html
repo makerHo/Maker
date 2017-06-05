@@ -1,0 +1,19 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector(".demo");
+//setInterval(code,time)每隔time时间就会执行一次code；用来设置code执行间隔
+setInterval(function(){
+	var d=new Date();
+	var y=d.getFullYear();
+	var mo=d.getMonth();
+	var da=d.getDate();
+	var h=d.getHours();
+	var m=d.getMinutes();
+	var s=d.getSeconds();
+	demo.innerHTML=y+"_"+mo+"_"+da+" "+h+":"+m+":"+s;
+	console.log(111)
+	// alert(333);
+	time.innerHTML=d;
+	
+},1000);	
+</script>

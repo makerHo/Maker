@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<select id="jumpSite">
+	<option>网站</option>
+	<option value="http://www.baidu.com">百度</option>
+	<option value="http://www.qq.com">腾讯</option>
+</select>
+<script type="text/javascript">
+	var jumpSite=document.querySelector('#jumpSite');
+	jumpSite.addEventListener("change",function(){
+		//console.log(this.value);
+		location.href=this.value;
+	});
+</script>
+</body>
+</html>

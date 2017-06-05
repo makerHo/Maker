@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+	.ca{
+		width: 100px;
+		height: 100px;
+		border: 1px solid red;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div class="headerTopRight">
+						<span><a href="#2">登录</a>&nbsp; </span>
+						<!-- <span>|</span> -->
+						<span><a href="#3">注册</a></span>
+				</div>
+	<div class="ca"></div>
+	<script>
+		var wrap = document.querySelector(".headerTopRight span a");
+		var ca = document.querySelector(".ca");
+		console.log(ca)
+		wrap.addEventListener("click",function(){
+			ca.style.display="block 	"
+		})
+	</script>
+</body>
+</html>

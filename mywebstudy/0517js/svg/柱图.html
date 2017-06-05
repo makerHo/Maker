@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+#group{
+	transform: translate(0,260px);
+}
+
+	</style>
+</head>
+<body>
+<svg height="400" width="400">
+
+<g id="group" fill="orange">
+<rect id="b1" />
+<rect id="b2" />
+<rect id="b3" />
+<rect id="b4" />
+<rect id="b5" />
+<rect id="b6" />
+</g>
+<text x="30" y="30" fill="grey">企业ERP数据报表系统</text>
+<line x1="0" y1="260" x2="330" y2="260" stroke="grey" stroke-width="6"  />
+</svg>
+</body>
+<script type="text/javascript">
+
+var arr=[15,12,17,16,18,14,16];
+var box=[b1,b2,b3,b4,b5,b6];
+
+for(var i=0;i<box.length;i++){
+box[i].style.x=i*55+'px';
+box[i].style.width="40px";
+box[i].style.height=arr[i]*10;
+box[i].style.transform='scaleY(-1)';
+
+}
+
+
+
+
+</script>
+</html>

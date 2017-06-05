@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<select name="" id="jumpSite">
+		<option value="">网站</option>
+		<option value="http://www.baidu.com">百度</option>
+		<option value="http://www.qq.com">腾讯</option>
+	</select>
+	<script>
+	// var jumpSite=document.querySelector("#jumpSite");
+	// 	jumpSite.addEventListener("change",function(){
+	// 		location.href=this.value
+	// 		console.log(this)
+	// 	})
+	var jumpSite=document.querySelector("#jumpSite");
+		jumpSite.addEventListener("change",function(){
+			location.href=this.value;
+			console.log(this)
+		})
+	</script>
+</body>
+</html>

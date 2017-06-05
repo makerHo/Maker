@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.demo{
+			width:300px;
+			height:300px;
+			border:1px solid green;
+			overflow:hidden;
+		}
+	</style>
+</head>
+<body>
+<div class="demo">
+	<img src="car.jpg">
+</div>
+<script type="text/javascript">
+	var demo=document.querySelector(".demo");
+	//console.log(demo.innerHTML);
+	setInterval("changeImg()",2000);
+	
+	function changeImg(){
+		demo.innerHTML="<img src='cat.jpg'>";
+	}
+</script>
+</body>
+</html>

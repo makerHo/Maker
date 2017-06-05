@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<title></title> 
+<style type="text/css"> 
+/*
+
+
+Firefox 
+background: -moz-linear-gradient(top, #FF0000, #F9F900); 
+参数：top、bottom垂直，left、right水平 例如：top时从顶部由#FF0000到#F9F900渐变，bottom时从底部由#FF0000到#F9F900渐变 
+
+Opera 
+background: -o-linear-gradient(top,#FF0000, #F9F900); 
+参数：top、bottom垂直，left、right水平 例如：top时从顶部由#FF0000到#F9F900渐变，bottom时从底部由#FF0000到#F9F900渐变 
+
+webkit，如Chrome、Safari等 
+
+webkit内核的safari、 Chrome的Linear Gradients (线性渐变)的几点说明及演示：
+webkit内核的safari、 Chrome的Linear Gradients (线性渐变) 基本语法：background-image:-webkit-gradient(type,x1 y1, x2 y2, from(开始颜色值),to(结束颜色值), [color-stop(偏移量小数,停靠颜色值),…] );
+
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF0000),color-stop(.5,#00ff00), to(#F9F900)); 
+上面是旧版写法，新版写法：
+background: -webkit-linear-gradient(top,#FF0000, #F9F900); 
+参数：linear线性， x1 x2, x3 x4 x1与x3相同时垂直，x2与x4相同时水平 from起始颜色 to结束颜色
+
+IE系列 支持ie7以上。资料显示ie10以上已经支持w3c的渐变标准或者旧有的-ms-标准。但测试不完善。
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FF0000',endColorStr='#F9F900',gradientType='0'); 
+参数：startColorStr起始颜色 endColorStr结束颜色 gradientType为0时代表垂直，为1时代表水平 
+
+*/
+.test1 
+{ 
+width: 200px; 
+height: 80px; 
+text-align: center; 
+line-height: 80px; 
+margin-bottom: 10px; 
+color: White; 
+font-size: 20px; 
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FF0000',endColorStr='#F9F900',gradientType='0'); 
+background: -moz-linear-gradient(top, #FF0000, #F9F900); 
+background: -o-linear-gradient(top,#FF0000, #F9F900); 
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF0000), to(#F9F900));
+background: -webkit-linear-gradient(top,#FF0000, #F9F900); 
+background: linear-gradient(top,#FF0000, #F9F900); 
+} 
+.test2 
+{ 
+width: 200px; 
+height: 80px; 
+text-align: center; 
+line-height: 80px; 
+margin-bottom: 10px; 
+color: White; 
+font-size: 20px; 
+filter: progid:DXImageTransform.Microsoft.Gradient(startColorStr='#FF0000',endColorStr='#F9F900',gradientType='1'); 
+background: -moz-linear-gradient(left, #FF0000, #F9F900); 
+background: -o-linear-gradient(left,#FF0000, #F9F900); 
+background: -webkit-gradient(linear, 0% 0%, 100% 0%, from(#FF0000),color-stop(.5,#00ff00), to(#F9F900)); 
+background: -webkit-linear-gradient(left,#FF0000, #F9F900); 
+background: linear-gradient(left,#FF0000, #F9F900); 
+
+} 
+</style> 
+</head> 
+<body> 
+<div class="test1"> 
+垂直渐变 
+</div> 
+<div class="test2"> 
+水平渐变 
+</div> 
+</body> 
+</html> 

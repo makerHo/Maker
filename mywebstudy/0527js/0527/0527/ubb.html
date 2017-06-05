@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var str="[b]会议[/b]指出，[b]党的十八大[/b]以来，以[b]习近平[/b]同志[i]为核心[/i]的[color=red]党中央[/color]把巡视作为推进全面从严治[b][color=purple]党的[/color][/b]重大举措，对加强和改进巡视工作作出一系列重大决策部署，坚持党内监督和群众监督相结合，赋予巡视制度新的活力。实践证明，巡视工作是治标之举，也是治本之策，必须在坚持中深化、在深化中坚持，发挥标本兼治作用。";
+document.write(str+"<hr>");
+var pattern=new Array(
+		/\[b\](.+?)\[\/b\]/gmi,
+		/\[i\](.+?)\[\/i\]/gmi,
+		/\[color=(.+?)\](.+?)\[\/color\]/gmi
+	);
+//console.log(str.match(pattern));
+//console.log(RegExp.$1);
+var replacement=new Array(
+		"<strong>$1</strong>",
+		"<i>$1</i>",
+		'<span style="color:$1">$2</span>'
+	);
+for(i in pattern){
+	str=str.replace(pattern[i],replacement[i]);
+}
+document.write(str);
+</script>
+</body>
+</html>

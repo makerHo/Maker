@@ -1,0 +1,114 @@
+<!-- <script>
+function Msg(){
+	var username='Lee';
+	return username+"Hello"
+}
+document.write(Msg());
+</script> -->
+<!-- <script>
+function Msg(){
+	// var username='Lee';
+	console.log('username')
+	return;
+	console.log("Sam")
+}
+document.write(Msg());
+</script> -->
+<!-- <script>
+function Msg(){
+	return 55;
+}
+document.write( "hi"+Msg());
+</script>
+ -->
+<!-- <script>
+function Msg(){
+	return false;
+}
+document.write( "hi"+Msg());
+</script> -->
+<!-- <script>
+function Msg(){
+	var myarr=new Array('lee','zhang')//返回数组
+	return myarr;
+}
+document.write( "hi"+Msg());
+</script> -->
+<!-- <script>
+function Msg(){
+	return ['lee','zhang'];//常用返回数组的方式
+
+}
+document.write("hi "+Msg());
+</script> -->
+<!-- 建立对象 -->
+<!-- <script>
+var member={
+	"username":"tom",
+	"gender":"male",
+	'level':'vip'
+}
+console.log(member);
+console.log(typeof member);
+</script> -->
+<!-- 使用return返回对象 -->
+<!-- <script>
+	function Msg(){
+		alert(666);
+	}
+		// return{
+		// 	"username":"tom",
+		// 	"gender":"male",
+		// 	'level':'vip'
+		// }
+	function demo(){
+		return alert(333)	
+	}
+	
+document.write('hi '+Msg().demo());
+</script> -->
+
+<!-- <script>
+function Msg(){
+	return function(){
+		alert(444);
+	}
+}
+Msg()();
+
+</script> -->
+<!--  -->
+<!-- <script>
+function Msg(username){
+	return username;
+}
+document.write(Msg('Tonn'));
+// username 是形式参数，简称形参；
+// 'Tonn'是实际参数，简称实参；
+</script> -->
+<select name="" class="demo">
+	<option value="red">red</optinon>
+	<option value="green">green</optinon>
+	<option value="yellow">yellow</optinon>
+	<option value="blue">blue</optinon>
+	<option value="black">black</optinon>
+	<option value="pink">pink</optinon>
+	<option value="purple">purple</optinon>s
+</select>
+<script>
+	var demo=document.querySelector(".demo")
+	demo.addEventListener("change",function(){
+		// console.log(this.value)
+		// alert(this.value);
+		changeColor(this.value);
+	});
+function changeColor(color){
+	document.body.style.background=color;
+}
+function addZero(num){
+	if (i=6;num<10;i+=2) {
+		num="0"+num;
+	}
+	return num;
+}
+</script>

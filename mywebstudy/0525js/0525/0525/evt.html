@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{
+			background:gray;
+		}
+		body{
+			background:lightyellow;
+		}
+	</style>
+</head>
+<body>
+<button>button</button>
+<script type="text/javascript">
+	var btn=document.querySelector("button");
+	var html=document.querySelector("html");
+	var body=document.querySelector("body");
+	html.addEventListener("click",function(){
+		alert("html");
+	});
+	body.addEventListener("click",function(evt){
+		evt.stopPropagation();
+		alert("body");
+	});
+	
+	btn.addEventListener("click",function(evt){
+		evt.stopPropagation();
+		//console.log(evt);
+		alert(evt);
+	});
+</script>
+</body>
+</html>

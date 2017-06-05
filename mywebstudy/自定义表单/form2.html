@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*
+			 * 1、在input元素中,label元素中的for属性要与input中的id对应匹配；
+				2、隐藏默认的checkbox  visibility: hidden;
+				3、给外壳做个div形状；position 为releave的，然后与label相呼应；
+				4、给label做形状;(初始形状)position:绝对定位.
+				5、被点击后的化：checked + label。
+				
+				6、用before伪类增加背景或者内容。注（不能少了content 定位)
+			 */
+			.myform{width:100px;height:40px;border-radius:20px;
+			background:#ccc;margin:100px auto;position: relative;}
+			#in1{visibility: hidden;}
+			#in1+label{width:40px;height:40px;background:#eee;
+				transition:all 200ms;
+			position: absolute;top:0;right:60px;border-radius:20px;box-shadow: 1px 1px 1px #777 inset;}
+			#in1:checked+label{right:0;background:orange;box-shadow:  0 0 0 ;}
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="myform">
+				<input type="checkbox" name="in1" id="in1" checked="checked" />
+				<label for="in1"></label>
+			</div>
+		</div>
+	</body>
+</html>

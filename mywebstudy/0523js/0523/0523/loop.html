@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+		}
+		ul{
+			list-style: none;
+		}
+		img{
+			border:0;
+			width:182px;
+			height:108px;
+		}
+		.scroll{
+			width:546px;
+			height:108px;
+			margin:50px auto;
+			border:1px solid green;
+			position:relative;
+		}
+		.scroll .wrap{
+			width:546px;
+			height:108px;
+			position: relative;
+			overflow: hidden;
+		}
+		.scroll ul{
+			position: absolute;
+			top:0;
+			left:0;
+			width:1500px;
+			border:1px solid red;
+		}
+		.scroll ul li{
+			float:left;
+			width:182px;
+			height:108px;
+			text-align:center;
+		}
+	</style>
+</head>
+<body>
+<div class="scroll">
+	<div class="wrap">
+		<ul>
+			<li><img src="1.jpg"></li>
+			<li><img src="2.jpg"></li>
+			<li><img src="3.jpg"></li>
+			<li><img src="4.jpg"></li>
+		</ul>
+	</div>
+</div>
+<script type="text/javascript">
+	var scroll=document.querySelector(".scroll");
+	var ul=document.querySelectorAll(".wrap ul")[0];
+	ul.innerHTML+=ul.innerHTML;
+	//为left赋一个初始值
+	var left=parseInt(ul.style.left)||0;
+	var imgWidth=document.querySelector(".wrap ul li img").offsetWidth;
+	//console.log(imgWidth.offsetWidth);
+	//ul.style.left="-"+imgWidth*4+"px";
+	setInterval(function(){
+		left--;
+		if(left<="-"+imgWidth*4){
+			left=0;
+		}
+		ul.style.left=left+"px";
+		console.log(left);
+	},30);
+</script>
+</body>
+</html>

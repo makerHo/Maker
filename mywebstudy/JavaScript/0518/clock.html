@@ -1,0 +1,59 @@
+<script src="tools.js"></script>
+<div class="clock"></div>
+<!-- <script>
+var clock=document.querySelector('.clock');
+console.log(clock);
+setInterval(
+		function(){
+			var d=new Date();
+			var h=d.getHours();
+			var m=d.getMinutes();
+			var s=d.getSeconds();
+			clock.innerHTML=h+":"+m+":"+s;
+		},100)
+</script> -->
+<!-- <script>
+ var Msg=function(){
+ 	alert("提交成功~")
+ };
+ Msg();
+</script> -->
+<!-- <script>
+(function(){
+	alert("提交成功~");
+})()
+</script> -->
+<!-- <script>
+(function(username){
+	alert(username)
+})('tom')
+</script> -->
+<!-- <script>
+	var Msg=function(username){
+		alert(username)
+	}
+	Msg('maker')
+</script> -->
+<!-- <script>
+var Msg=cc=>cc;
+alert(666);
+</script> -->
+<!-- <script>
+var sum=(sum1,sum2)=>(sum1+sum2);
+ alert(sum(2,6));
+</script> -->
+<!-- <script>
+var Msg=new Function("return 'Maker'");//Function需要大写
+console.log(Msg());
+</script> -->
+<!-- <script>
+var Msg=new Function("username","return username")
+console.log(Msg('Msker'))
+</script> -->
+<!-- ------------------------------------------ -->
+	<script>
+	function Msg(username,level){
+		console.log(arguments);
+	}
+	Msg('Tom','Lee','vip');
+	</script>

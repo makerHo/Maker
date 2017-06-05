@@ -1,0 +1,21 @@
+<input type="radio" id="boy" name="g1"><label for="boy">boy</label>
+<input type="radio" id="girl" name="g1"><label for="girl">girl</label>
+<style>
+	input[type=radio]{
+		display: none
+	}
+	label:before{
+		content: "";
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+		border: 1px solid red;
+		border-radius: 50%;
+	}
+	input[type=radio]:checked+label:before{
+	background:red
+}
+</style>
+<script>
+
+</script>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="text"><br>
+<script type="text/javascript">
+	var input=document.querySelector("input");
+	input.addEventListener("focus",function(){
+		this.style.background="lightyellow";
+	});
+	input.addEventListener("blur",function(){
+		this.style.background="#fff";
+	});
+</script>
+</body>
+</html>

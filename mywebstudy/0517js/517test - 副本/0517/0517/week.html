@@ -1,0 +1,16 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector(".demo");
+var d=new Date();
+var weekday=d.getDay();
+//0~6
+switch(weekday){
+	case 0:
+	weekday="周日";
+	break;
+	case 3:
+	weekday="周三";
+	break;
+}
+demo.innerHTML=weekday;
+</script>

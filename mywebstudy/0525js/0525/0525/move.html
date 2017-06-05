@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.demo{
+			width:100px;
+			height:100px;
+			background:green;
+			position: absolute;
+		}
+		.move{
+			width:100px;
+			height:100px;
+			background:green;
+			position: absolute;
+			animation: disappear 1s forwards;
+		}
+		@keyframes disappear{
+			0%{
+				transform:rotate(0deg) scale(1) translate(0px,0px);
+			}
+			100%{
+				transform:rotate(45deg) scale(0) translate(600px,850px);
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="demo"></div>
+<script type="text/javascript">
+	var demo=document.querySelector(".demo");
+	var left=0;
+	//为body绑定事件
+	document.body.addEventListener("keydown",function(evt){
+		switch(evt.keyCode){
+			case 37:
+				left=left-10;
+				demo.style.left=left+"px";
+				break;
+			case 39:
+				left=left+10;
+				demo.style.left=left+"px";
+				break;
+			case 13:
+				demo.className="move";
+				break;
+		}
+	});
+</script>
+</body>
+</html>

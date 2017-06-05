@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			border: 1px solid red;
+		}
+		ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		li{
+			float: left;
+			list-style: none;
+			height: 50px;
+			width: 50px;
+			border: 1px solid #ff5f00;
+			text-align: center;
+			line-height: 50px;
+			margin-left: 10px; 
+		}
+		img{
+			width: 50%;
+			height: 50%;
+		}
+		.active{
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<ul class="demo">
+		<li>one&nbsp; </li>
+		<li class="active">two&nbsp; </li>
+		<li>three&nbsp; </li>
+		<li>four&nbsp;</li>
+	</ul>
+	<img src="a2.jpg" alt="">
+	<script>
+	var list=document.querySelector(".demo").querySelectorAll("li");
+	console.log(list);
+	list.forEach(function(value,index){
+		// console.log(index);
+		value.addEventListener("click",function(){
+			list.forEach(function(v,i){
+				v.className="";
+			})
+
+				
+			// console.log(this);
+			this.className="active";			
+		})
+	})
+
+	</script>
+</body>
+</html>

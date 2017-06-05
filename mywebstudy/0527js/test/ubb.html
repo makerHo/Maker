@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var str="它只替换了首字母。但[b]表达式结果[就不一样了支持正则表达式，它可以按照正则表达式的规则匹配字符/b]或字符串，然后给予替换！它只替换了首字母。但如果加上正则表达式结果就不一样了支持[b]正则表达式[/b]，它可以按照正则表达式的规则匹配字符或字符串，然后给予替换！它只替换了首字母。但如果加上正则表达式结果就不一样了支持正则表达式，它可以按照正则表达式的规则匹配字符或字符串，然后给予替换！";
+	document.write(str+"<hr/>");
+	var pattern=/\[b\](.+?)\[\/b\]/gmi;
+	// console.log(str.match(pattern));
+	var replacement="<strong>$1</strong>"
+	document.write(str.replace(pattern,replacement))
+	</script>
+</body>
+</html>

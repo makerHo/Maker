@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>x</title>
+	<style>
+		.wrap{
+			width: 110px;
+			height: 50px;
+			background: #ccc;
+			border-radius: 25px;
+			margin: 50px auto;
+			/*float: left;*/
+			position: relative;		
+		}
+		#i1{
+			
+			visibility: hidden;
+			
+
+		}
+		#i1+label{
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: #eee;
+			border-radius: 50%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			transition: all 200ms;
+			box-shadow: 1px 1px 2px #ccc inset;
+		}
+		#i1:checked +label{
+			left: 60px;
+			top: 0;
+			background: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<form action="">
+			<input type="checkbox" id="i1" name="g1">
+			<label for="i1"></label>
+			<!-- <input type="checkbox" id="b">
+			<label for="b">man</label> -->
+		</form>
+	</div>
+</body>
+</html>

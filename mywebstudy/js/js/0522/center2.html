@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="Tools.js"></script>
+	<style type="text/css">
+		body{
+			height:1500px;
+		}
+		.ad{
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+<img src="cat.jpg" class='ad'>
+<script type="text/javascript">
+//页面加载结束
+window.addEventListener("load",function(){
+	//元素居中
+	var ad=document.querySelector(".ad");
+	//alert(getScrollSize().top);
+	center(ad);
+});
+//窗口滚动条滚动
+window.addEventListener("scroll",function(){
+	//元素居中
+	var ad=document.querySelector(".ad");
+	//alert(getScrollSize().top);
+	center(ad);
+});
+//窗口调整大小
+window.addEventListener("resize",function(){
+	//元素居中
+	var ad=document.querySelector(".ad");
+	//alert(getScrollSize().top);
+	center(ad);
+});
+</script>
+<img src="1.jpg">
+</body>
+</html>

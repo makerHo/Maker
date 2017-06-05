@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+*{margin:0;padding:0;list-style: none;}
+input{visibility: hidden;}
+li{width:100px;height:100px;background: #eee;
+	border-radius:50%;margin:20px auto;position: relative;}
+/*input后面的label*/
+input+label{position: absolute;border-radius:50%;
+width:80px;height:80px;background: orangered;top:10px;left:10px;
+/*小手指示*/
+cursor: pointer;}
+input:checked+label{background: yellow;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<form>
+			<ul>
+			<li>
+			<input name="g1" type="radio" id="r1">
+			<label for="r1"></label>
+			</li>
+			<li>
+			<input name="g1" type="radio" id="r2">
+			<label for="r2"></label>
+			</li>
+			</ul>
+		</form>
+	</div>
+</body>
+</html>

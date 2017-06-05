@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	var str="您好，我是http://www.baidu.com版您好您好，我是 TIM PC版 产品经理，欢迎您给我们提产品的使用感受和建议您好，我是 TIM PC版 产品http://www.qq.com经理，欢迎您给我们提产品的使用感受和建议，我是 TIM PC版 产品经理，欢迎您给我们http://www.taobao.com提产品的使用感受和建议 产品经理，欢迎您给我们提产品的使用感受和建议";
+	document.write(str+"<hr>");
+	var pattern=/(http):\/\/(www)\.([a-z]+)\.(com)/gm;
+	//console.log(str.match(pattern));
+	document.write(str.replace(pattern,"<a href='$1://$2.$3.$4'>$1://$2.$3.$4</a>"));
+</script>
+</body>
+</html>

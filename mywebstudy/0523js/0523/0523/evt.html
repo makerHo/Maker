@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		html{
+			background:gray;
+		}
+		body{
+			background:lightyellow;
+		}
+	</style>
+</head>
+<body>
+<button class="btn">button</button><br>
+<img src="1.jpg">
+<script type="text/javascript">
+	var btn=document.querySelector(".btn");
+	var img=document.querySelector("img");
+	var html=document.querySelector("html");
+	html.addEventListener("click",msg);
+	function msg(){
+		console.log("hello");
+	}
+	/*html.addEventListener("click",function(){
+		console.log("hello2");
+	});*/
+	/*window.addEventListener("load",function(){
+		alert(1);
+	});
+	window.addEventListener("load",function(){
+		alert(2);
+	});*/
+	/*window.onload=function(){
+		alert(1);
+	}
+	window.onload=function(){
+		alert(2);
+	}*/
+	/*html.onmouseout=function(){
+		alert("html");
+	}
+	html.onmouseover=function(){
+		alert("html2");
+	}*/
+	/*btn.onclick=function(){
+		console.log(new Date().toLocaleTimeString());
+	}
+	img.onclick=disappear;
+	function disappear(){
+		this.style.display="none";
+	}*/
+</script>
+</body>
+</html>

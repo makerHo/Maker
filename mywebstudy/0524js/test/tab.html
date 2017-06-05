@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.wrap{}
+		.demo{}
+		.demo ul{
+			/*border: 1px solid  blue;*/
+		}
+		.demo ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.demo ul li{
+			border: 1px solid red;
+			float: left;
+			padding: 20px;
+			margin-left: 20px;
+		}
+		.demo ul li.active{
+			border: 2px solid purple;
+			position: relative;
+			top: 5px;
+			z-index: 10;
+
+			border-bottom: none;
+			background:#fff;
+		}
+		.box div{
+			height: 200px;
+			border: 2px solid purple;
+			display: block;
+			position: relative;
+			top: 3px;
+			z-index: 9;
+			display: none;
+		}
+		.box .chabox{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="demo">
+			<ul>
+				<li class="active">one</li>
+				<li>two</li>
+				<li >three</li>
+				<li>four</li>
+			</ul>
+		</div>
+		<div class="box">
+			<div class="chabox">one</div>
+			<div >two</div>
+			<div>three</div>
+			<div>four</div>
+		</div>
+	</div>
+	<script>
+		var lis=document.querySelectorAll(".demo ul li");
+		var divs=document.querySelectorAll(".box div");
+		var active=document.querySelector(".active");
+		var chabox=document.querySelector(".chabox");
+		// lis.addEventListener("mouseover",function(){
+
+		// })
+		 lis.forEach(function(value,index){
+		 	value.addEventListener("mouseover",function(){
+		 		lis.forEach(function(v,i){
+		 			v.className=""
+		 			divs[i].className=""
+		 		})
+		 		value.className="active";
+			divs[index].className="chabox";
+		 	})
+		 })
+	</script>
+</body>
+</html>

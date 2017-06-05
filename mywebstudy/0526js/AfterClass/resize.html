@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <button class="btn">Button</button>
+  <script>//gender:性别 //female女性的，柔弱的
+	var btn=document.querySelector(".btn");
+	var member={"username":"tom","gender":"female","add":"水产路"}
+		btn.addEventListener("click",function(){
+			alert(member)//打印信息：[object Object]
+			console.log(member);//member成员
+		})	//打印结果为 Object {username: "tom", gender: "female", add: "水产路"}
+//结论为console.log 比alert信息详细
+		var str="";
+		for(i in member){
+			console.log(str)//输出结果为
+								//resize.html:23 tom
+								//resize.html:23 tomfemale
+								//resize.html:23 tomfemale水产路
+		alert(member[i])//3次弹框
+		}
+		console.log(str)//tomfemale水产路
+  </script>
+ </body>
+</html>

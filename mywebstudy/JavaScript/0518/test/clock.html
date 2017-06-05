@@ -1,0 +1,22 @@
+<div class="demo"></div>
+<script>
+function times(){var demo=document.querySelector('.demo')
+	console.log(demo);
+	 var d=new Date();
+	 var h=d.getHours();
+	 var m=d.getMinutes();
+	 var s=d.getSeconds();
+	 // var m=d.toLocaleTimeString();
+	 if (s<10) {
+	 	s="0"+s
+	 }else{
+	 	s=s
+	 }
+	 if (m<10) {
+	 	m="0"+m
+	 }else{
+	 	m=m
+	 }
+	 demo.innerHTML=h+":"+m+":"+s;}
+	 setInterval('times()',100)
+</script>

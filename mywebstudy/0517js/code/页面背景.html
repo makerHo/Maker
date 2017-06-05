@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#box{height: 100px;background: #eee;}
+	</style>
+</head>
+<body>
+
+
+<div id="box"></div>
+<form action="">
+<input type="radio" id="i1" name="g1" onclick="alert(1)"><label for="i1">red</label>
+<input type="radio" id="i2" name="g1" onclick="事件2()"><label for="i2">blue</label>
+</form>
+<script type="text/javascript">
+//文档页面背景是个新值 
+document.bgColor="#f0f";
+//某div的样式的背景的颜色是新值
+box.style.background="red";
+
+//事件 ，任务
+function 事件(){
+	alert("打怪升级");
+	document.bgColor="pink";
+}
+//事件 ，任务
+function 事件2(){
+	//alert("打怪升级");
+	document.bgColor="darkblue";
+}
+</script>
+</body>
+</html>

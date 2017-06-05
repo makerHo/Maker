@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="com.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+*{margin:0;padding:0;list-style: none;}
+
+.box{
+
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;
+
+}
+.box li{}
+/*%布局*/
+/*.box li:nth-child(1){width:20%;background: red;}
+.box li:nth-child(2){width:60%;background: grey;}
+.box li:nth-child(3){width:20%;background: red;}*/
+/*份数flex*/
+/*.box li:nth-child(1){flex:1;background: red;}
+.box li:nth-child(2){flex:5;background: grey;}
+.box li:nth-child(3){flex:1;background: red;}*/
+
+/*混合 px  % flex*/
+.box li:nth-child(1){width:60px;background: red;}
+.box li:nth-child(2){flex:5;background: grey;}
+.box li:nth-child(3){flex:1;background: red;}
+
+
+	</style>
+
+</head>
+<body>
+	<div class="warp">
+<ul class="box">
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+	</div>
+</body>
+</html>

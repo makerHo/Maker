@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="demo">
+	<script>
+		var demo=document.querySelector(".demo");
+		demo.addEventListener("copy",function(){
+			alert(333);
+		})
+		demo.addEventListener("paste",function(evt){
+			// alert("已经粘贴")
+			evt.preventDefault();
+		})
+		demo.addEventListener("cut",function(){
+			alert("已剪切")
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#pic{
+			display: none;
+		}
+		label{
+			color: #cb234a;
+			border: 5px solid red;
+			display: block;
+			box-shadow: 2px 2px 2px 
+		}
+	</style>
+</head>
+<body>
+	<input type="file" id="pic">
+	<label for="pic">上传文件</label>
+	<img src="" id="preview" alt="">
+	<script>
+		var pic=document.querySelector("#pic");
+		var preview=document.querySelector("#preview");
+		//this.files:上传的文件，数组类型；
+		//this。files[0]:上传的第一个文件：
+		//console.log（this。files[]）;
+		//this files[0]:上传的文件
+		//readAsDataURL:把上传的文件作为DataURL数据保存在fr中;
+		var fr=new  FileReader();
+		pic.addEventListener("change",function(){
+			console.log(this.files[0]);
+			fr.readAsDataURL(this.files[0]);
+			fr.addEventListener("loadend",function(){
+				preview.src=this.result;
+			})
+		})
+	</script>
+</body>
+</html>

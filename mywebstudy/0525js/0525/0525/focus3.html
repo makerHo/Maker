@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="feedback"></div>
+<input type="text" name="" id="username"><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<input type="text" name=""><br>
+<script type="text/javascript">
+	var feedback=document.querySelector(".feedback");
+	var username=document.querySelector("#username");
+	var inputs=document.querySelectorAll("input:not(#username)");
+	username.addEventListener("focus",function(){
+		this.style.background="lightyellow";
+		feedback.innerHTML="";
+	});
+	username.addEventListener("blur",function(){
+		this.style.background="#fff";
+		//console.log(this.value);
+		if(this.value==""){
+			feedback.innerHTML="用户名不得为空";
+		}
+	});
+	//循环为input添加事件
+	inputs.forEach(function(value){
+		value.addEventListener("focus",function(){
+			this.style.background="lightyellow";
+		});
+		value.addEventListener("blur",function(){
+			this.style.background="#fff";
+		});
+	})
+</script>
+</body>
+</html>

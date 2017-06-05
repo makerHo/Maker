@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style type="text/css">
+.old{  
+
+    width:300px;  
+
+    height:300px;  
+
+/*
+
+渐变的类型? (linear)
+渐变开始的X Y 轴坐标(0 0 – 或者left-top)
+渐变结束的X Y 轴坐标(0 100% 或者left-bottom)
+开始的颜色? (from(red))
+中间加入的颜色是中间色 color-stop(0.5 orange)
+结束的颜色? (to(blue))
+
+第一个参数：表示的是渐变的类型
+
+                                   linear线性渐变
+
+             第二个参数：分别对应x，y方向渐变的起始位置(可以是top left)也可以是%比
+
+             第三个参数：分别对应x，y方向渐变的终止位置(可以是left-bottom)也可以是%比
+
+             第四个参数：设置了起始位置的颜色
+
+             第五个参数：设置了终止位置的颜色
+*/
+    background:-webkit-gradient(linear, left top, right top, from(#ff0000),  color-stop(0.5, yellow),  color-stop(0.5, orange),to(rgba(0, 0, 255, 0.5)));
+
+}  
+
+.new{
+	width:100px;
+	height:100px;
+	
+	/*第一个值表示方向（可以写top left 度数）,后面按顺序依次写上颜色及现出的位置*/
+	/*要到外面去浏览*/
+	background:-webkit-linear-gradient(30deg,#ff0000 50%,blue);
+	}
+
+/*
+Firefox 3.6+  
+background: -moz-linear-gradient(left, #ace, #f96, #ace, #f96, #ace); 
+ Safari 4-5, Chrome 1-9  
+background: -webkit-gradient(linear, left top, right top, from(#ace), color-stop(0.25, #f96), color-stop(0.5, #ace), color-stop(0.75, #f96), to(#ace)); 
+ Safari 5.1+, Chrome 10+ 
+background: -webkit-linear-gradient(left, #ace, #f96, #ace, #f96, #ace); 
+ Opera 11.10+ 
+background: -o-linear-gradient(left, #ace, #f96, #ace, #f96, #ace);
+
+*/
+
+body,td,th {
+	color: #CCC;
+}
+body {
+	background-color: #696969;
+}
+</style>
+
+</head>
+
+<body>
+<div class="new"></div>  
+</body>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		input[type=radio]{
+			display: none;
+		}
+		label:before{
+			content: "";/* content 虚拟化元素，表示创建了一个元素，在使用before是不可缺少的*/
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+			border: 1px solid red;
+		}
+		input[type=radio]:checked+label:before{/*input[type=radio]是input总的checked属性被激发的状态 */
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="radio" id="man" name="g1">
+	<label for="man">男</label>
+	<input type="radio" id="women" name="g1">
+	<label for="women">女</label>
+</body>
+</html>

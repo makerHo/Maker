@@ -1,0 +1,21 @@
+<input type="radio" id="male" name="g">
+<label for="male">男</label>
+<input type="radio" id="female" name="g">
+<label for="female">女</label>
+<style>
+input[type=radio]{
+	display:none;
+}
+label:before{
+	content:"";
+	display:inline-block;
+	width:20px;
+	height:20px;
+	border-radius:20px;
+	border:1px solid orange;
+}
+/*input+label*/
+input[type=radio]:checked+label:before{
+	background:green;
+}
+</style>

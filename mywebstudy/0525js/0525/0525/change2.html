@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<a href="#" id="jumpBar" target="_blank"></a>
+<select>
+	<option>选择网站</option>
+	<option value="http://www.baidu.com">百度</option>
+	<option value="http://www.qq.com">腾讯</option>
+</select>
+<script type="text/javascript">
+	var select=document.querySelector("select");
+	var jumpBar=document.querySelector("#jumpBar");
+	select.addEventListener("change",function(){
+		//console.log(this.value);
+		//console.log(jumpBar.href);
+		jumpBar.href=this.value;
+		//调用a的单击事件
+		jumpBar.click();
+	});
+</script>
+</body>
+</html>

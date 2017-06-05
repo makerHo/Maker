@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.demo{
+			margin: 100px auto;
+			
+			text-align: center;
+			font-size: 30px;
+		}
+		.demoTop{
+			width: 200px;
+			height: 100px;
+			border: 1px solid purple;
+			box-sizing: border-box;
+			transition: 1s;
+			line-height: 50px;
+			transform-origin:0 100%;
+		}
+		.demoBottom{
+			width: 200px;
+			height: 100px;
+			border: 1px solid blue;
+			box-sizing: border-box;
+			transform-origin: 0% 0%;
+			transition: 1s;
+			line-height: 150px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="demo" style="width: 600px;">
+		<div class="demoTop">的马斯呀</div>
+		<div class="demoBottom">阿西吧</div>
+	</div>
+	<script>
+	var demo = document.querySelector('.demo');
+	var	demoTop=document.querySelector('.demoTop');
+	var demoBottom=document.querySelector('.demoBottom');
+	var i=2;
+	demo.addEventListener('click',function(){
+		//console.log(demo);
+		if (i%2 == 0) {
+			alerts();
+			demoTop.style.transform="rotateX(180deg)"
+			demoTop.style.opacity=0;
+			demoBottom.style.transform="rotateX(180deg)"
+			demoBottom.style.opacity=0;
+			i++;
+		}else{
+			alerts();
+			alerts();
+			//demo.style.transform="scale(2,2)";
+			demoTop.style.transform="rotateX(360deg)"
+			demoTop.style.opacity=1;
+			demoBottom.style.transform="rotateX(360deg)"
+			demoBottom.style.opacity=1;
+			i++;
+		}
+	});
+
+	function $(element){
+		element = document.querySelector(element);
+		element.style.width='200px';
+		element.style.height='300px';
+		element.style.border='1px solid red';
+		return element;
+	}
+	var odiv1=$('.demo');
+	console.log(odiv1);
+	// var myDiv = $(".demo");
+	// var myDiv2 = $(".demoTop");
+
+	// console.log(myDiv);
+	// console.log(myDiv2);
+	/*var	demoBottom=document.querySelector('.demoBottom');
+	//console.log(demo);
+	demoBottom.addEventListener('click',function(){
+		//demo.style.transform="scale(2,2)";
+		
+	})*/
+	function alerts(){
+			alert("请充值一百元！");
+	}
+	alerts();
+	alerts();
+
+	</script>
+</body>
+</html>

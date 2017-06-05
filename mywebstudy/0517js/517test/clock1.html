@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 1000px;
+			height: 200px;
+			border: 1px solid red;
+		}
+		.box img{
+			width: 5%;
+			/*height: 50%;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<img id="pic1" src="img/0.jpg" alt="">
+	<img id="pic2" src="img/0.jpg" alt="">
+	<img id="" src="img/c.jpg" alt="">
+	<img id="pic3" src="img/0.jpg" alt="">
+	<img id="pic4" src="img/0.jpg" alt="">
+	<img id="" src="img/c.jpg" alt="">
+	<img id="pic5" src="img/0.jpg" alt="">
+	<img id="pic6" src="img/0.jpg" alt="">
+	</div>
+	<script>
+	function clock(){
+		var myarr=new Array('a','b','c','d','e','f')
+		var pic= new Array(1,2,3,4,5,6)
+
+	var z=new Date();
+	var n=z.toLocaleTimeString()
+	var a=n.charAt(0);
+	var b=n.charAt(1);
+	var c=n.charAt(3);
+	var d=n.charAt(4);
+	var e=n.charAt(6);
+	var f=n.charAt(7);
+	for(i in myarr){
+		
+	}
+	pic1.src="img/"+a+".jpg";
+	pic2.src="img/"+b+".jpg";
+	pic3.src="img/"+c+".jpg";
+	pic4.src="img/"+d+".jpg";
+	pic5.src="img/"+e+".jpg";
+	pic6.src="img/"+f+".jpg";
+}
+setInterval("clock()",100)
+</script>
+</body>
+</html>

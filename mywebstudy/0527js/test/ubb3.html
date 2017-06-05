@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var str="它只替换了首字母。但[b]表达式结[/b]果[i]就不一样了[/i]支持正[color=red]则表达式[color]，它可以按照正则表达式的规则匹配字符或字符串，然后给予替换！它只替换了首字母。但如果加上正则表达式结果就不一样了支持[b]正则表达式[/b]，它可以按照正则表达式的规则匹配字符或字符串，然后给予替换！它只替换了首字母。但如果加上正则表达式结果就不一样了支持正则表达式，它可以按照正则表达式的规则匹配字符或字符串，然后给予替换！";
+	document.write(str+"<hr/>");
+	var pattern=new Array(
+			/\[b\](.+?)\[\/b\]/gmi,
+			/\[i\](.+?)\[\/i\]/gmi,
+			/\[color=(.+?)\](.+?)\[color\]/gmi
+		);
+		replacement=new Array(
+			"<strong>$1</strong>",
+			"<i>$1</i>",
+			"<span style='color:$1'>$2</span>"
+			)
+		for(i in pattern){
+			str=str.replace(pattern[i],replacement[i])
+		}
+	document.write(str);
+	</script>
+</body>
+</html>

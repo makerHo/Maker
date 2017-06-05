@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="" name="" class="demo">
+<script type="text/javascript">
+	var demo=document.querySelector(".demo");
+	demo.addEventListener("copy",function(){
+		alert("copy");
+	});
+	demo.addEventListener("paste",function(evt){
+		//alert("paste");
+		evt.preventDefault();
+	});
+	demo.addEventListener("cut",function(){
+		alert("cut");
+	});
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" class="username">
+	<script>
+	var username=document.querySelector(".username")
+		username.addEventListener("keyup",function(){
+			console.log(trim(this.value).length)
+		})
+		function trim(value){
+			//如果value中全是空格
+			if (/^(\s*)$/.test(value)) {
+				value=value.replace(/^(\s*)$/,"")
+			}else if (/^\s*(.+?)\s*$/.test(value)) {
+				//如果value的前后都是空格
+				value=value.replace(/^\s*(.+?)\s*$/,"$1")
+			}
+			return value;
+		}
+	</script>
+</body>
+</html>

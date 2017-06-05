@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin:0;
+		padding: 0;
+		list-style: none;
+	}
+		.tab{
+			/*border: 1px solid red;*/
+		}
+		.tab ul{
+			list-style:none;
+
+		}
+		.tab ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.tab li{
+			float: left;
+			width: 100px;
+			height: 50px;
+			border: 1px solid #ddd;
+			margin-left: 10px;
+		}
+		.tab ul li.active{
+			position: relative;
+			top: 5px;
+			background: #fff;
+			z-index: 10;
+			border: 2px solid #c23;
+			border-bottom: none;
+		}
+		.tab div{
+			height: 200px;
+			border: 2px solid #c23;
+			display: none;
+		}
+		div.spotlight{
+			display: block;
+			position: relative;
+			background: #FFF;
+			z-index: 9;
+			top: 3px;
+		}
+	</style>
+</head>
+<body>
+	<div class="tab">
+		<ul>
+			<li class="active"></li>
+			<li ></li>
+			<li></li>
+			
+		</ul>
+		<div class="spotlight"></div>
+		<div></div>
+		<div></div>
+	</div>
+	<script>
+	window.addEventListener("load",function(){
+	var lis=document.querySelectorAll(".tab li");
+	console.log(lis)
+	 //获取多个list
+	var divs=document.querySelectorAll(".tab div");
+	//通过循环为目标元素
+	  	lis.forEach(function(value,index){
+	  	value.addEventListener("mouseover",function(){
+	  		// console.log(value)
+	  		lis.forEach(function(v,i){
+	  			v.className="";
+	  			divs[i].className=" ";
+	  		})
+			value.className="active";
+	  		divs[index].className="spotlight";
+
+		})
+	})
+})
+	</script>
+</body>
+</html>

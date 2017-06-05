@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<span id="ddd">
+		<h1 class="demo"></h1>
+		<h2 class="demo"></h2>
+		<h3 class="demo"></h3>
+	</span>
+	<script>
+	var span=document.getElementById("ddd");
+	var h=span.getElementsByClassName("demo");//()中要求的是类名称，所以写法是”demo“，而不是“.demo”
+	console.log(h);
+	</script>
+</body>
+</html>

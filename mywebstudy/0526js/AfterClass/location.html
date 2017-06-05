@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	document.write(new Date().toLocaleTimeString());//输出本地时间
+	</script>
+	<button class="btn">button</button>
+	<script>
+	var btn=document.querySelector(.btn);
+		btn.addEventListener("click",function(){
+			location.reload();//reload重新加载事件
+		})
+		console.log(location);//ocation 对象包含有关当前 URL 的信息。Location 对象是 Window 对象的一个部分，可通过 window.location 属性来访问
+		console.log(location.href);
+		console.log(location.port);//设置或返回当前页面URL的端口。若当前URL没有端口，返回一个''(空字符串)。
+		console.log(location.pathname);//设置或返回当前页面URL的路径部分
+		console.log(location.protocol);//设置或返回当前页面URL的协议，最后面会有个':'冒号
+
+		console.log(localtion.search);//设置或返回当前页面URL的查询部分(从问号 (?) 开始的 URL)
+		//参考文献 http://www.cnblogs.com/polk6/p/5045277.html
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.demo{
+			width: 100px;
+			height: 100px;
+			background: green;
+			position: absolute;
+		}
+		.move{
+			width: 100px;
+			height: 100px;
+			background: red;
+			position: absolute;
+			animation: disappear 5s forwards;
+		}
+		@keyframes disappear{
+			0%{
+				transform: rotate(0deg) scale(1) translate(0px,0px);
+			}
+			100%{
+				transform: rotate(720deg) scale(0) translate(60px,300px);
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class="demo"></div>
+	<script>
+		var demo=document.querySelector(".demo");
+		var left=0;
+		document.body.addEventListener("keydown",function(evt){
+			switch(evt.keyCode){
+				case 37:
+				left=left-10;
+				demo.style.left=left+"px"
+				break;
+				case 39:
+				left=left+10;
+				demo.style.left=left+"px"
+				break;
+				case 13:
+				demo.className="move"
+				break;
+			};
+			})
+		
+	</script>
+</body>
+</html>

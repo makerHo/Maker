@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/tools.js"></script>
+</head>
+<body>
+	<div class="clock">
+		<img src="img/1.jpg" alt="">
+		<img src="img/2.jpg" alt="">
+		<img src="img/c.jpg" alt="">
+		<img src="img/3.jpg" alt="">
+		<img src="img/4.jpg" alt="">
+		<img src="img/c.jpg" alt="">
+		<img src="img/5.jpg" alt="">
+		<img src="img/6.jpg" alt="">
+	</div>
+		<script>
+		var clock=document.querySelector(".clock")
+		var imgs=document.querySelectorAll(".clock img")
+		// console.log(imgs);
+		setInterval(function(){
+			var d=new Date();
+			var h=addZero(d.getHours());
+			var m=addZero(d.getMinutes());
+			var s=addZero(d.getSeconds());
+			var str=h+"c"+m+"c"+s;
+			//每隔1秒钟，循环8次，8个时间生成的路径分别
+			//赋给8张图片
+			// clock.innerHTML=str;
+			// console.log(str);
+			// 每隔1s循环6张图片
+			for (var i = 0; i < imgs.length; i++) {//
+				// console.log(imgs[i].src)
+				imgs[i].src="img/"+str.charAt(i)+".jpg"//
+			}//
+
+		},1000)
+			// var clock=document.querySelector(".clock")
+			// var d=new Date();
+			// var h=addZero(d.getHours());
+			// var m=addZero(d.getMinutes());
+			// var s=add;Zero(d.getSeconds());
+			// var str=h+;":"+m+":"+s
+			// clock.innerHTML=str
+		</script>
+</body>
+</html>

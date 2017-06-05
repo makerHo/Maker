@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<button id="btn">Button</button>
+<script type="text/javascript">
+	var btn=document.getElementById("btn");
+	var member={"username":"tom","gender":"female","add":"水产路"};
+	btn.addEventListener("click",function(){
+		// alert(member);
+		// console.log(member);
+	});
+	var str="";
+	for(i in member){
+		str+=member[i];
+		console.log(str);
+		// alert(member[i]);
+	}
+	console.log(str);
+	/*btn.onclick=function(){
+		//window.resizeBy(-15,-15);
+		//window.resizeTo(55,55);
+		//window.moveTo(350,350);
+		window.moveBy(-15,-15);
+	}*/
+	/*btn.addEventListener("click",function(){
+		window.resizeBy(15,15);
+	});*/
+</script>
+</body>
+</html>

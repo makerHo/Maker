@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.box{
+			width: 1000px;
+			height: 200px;
+			border: 1px solid red;
+		}
+		.box img{
+			width: 5%;
+			/*height: 50%;*/
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<img id="pic1" src="img/0.jpg" alt="">
+	<img id="pic2" src="img/0.jpg" alt="">
+	<img id="pic3" src="img/c.jpg" alt="">
+	<img id="pic4" src="img/0.jpg" alt="">
+	<img id="pic5" src="img/0.jpg" alt="">
+	<img id="pic6" src="img/c.jpg" alt="">
+	<img id="pic7" src="img/0.jpg" alt="">
+	<img id="pic8" src="img/0.jpg" alt="">
+	</div>
+	<script>
+	function clock(){
+	var d=new Date();
+	var n=d.toLocaleTimeString()
+	var a=n.charAt(0);
+	var b=n.charAt(1);
+	var c=n.charAt(3);
+	var e=n.charAt(4);
+	var f=n.charAt(6);
+	var g=n.charAt(7);
+	pic1.src="img/"+a+".jpg";
+	pic2.src="img/"+b+".jpg";
+	pic4.src="img/"+c+".jpg";
+	pic5.src="img/"+e+".jpg";
+	pic7.src="img/"+f+".jpg";
+	pic8.src="img/"+g+".jpg";
+}
+setInterval("clock()",100)
+</script>
+</body>
+</html>

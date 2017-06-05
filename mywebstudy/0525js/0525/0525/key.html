@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div class="feedback"></div>
+<input type="password" name="" placeholder="密码" id="pwd">
+<script type="text/javascript">
+	var pwd=document.querySelector("#pwd");
+	var feedback=document.querySelector(".feedback");
+	pwd.addEventListener("keyup",function(){
+		//console.log(this.value);
+		if(this.value.length<6||this.value.length>12){
+			feedback.innerHTML="密码长度小12，大于6"
+		}else{
+			feedback.innerHTML="";
+		}
+	});
+</script>
+</body>
+</html>

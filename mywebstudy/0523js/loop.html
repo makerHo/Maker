@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		/*.demo{
+			border: 1px solid #cf3412;
+		}*/
+		/*--------------------------------------*/
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			border: 0;
+		}
+		img{
+			border: 0;
+			width: 182px;
+			height: 108px;
+		}
+		/*.scroll{
+			width: 546px;
+			height: 108px;
+			margin: 50px auto;
+			border: 1px solid #CCF;
+			position: relative;
+		}*/
+		.wrap{
+			width: 546px;
+			height: 108px;
+			position:relative;
+			overflow: hidden;
+
+		}
+		.scroll ul{
+			position:absolute;
+			/*top: 0;
+			left: 0;*/
+			width: 1500px;
+			border: 1px solid red; 
+		}
+		.scroll ul li{
+			float: left;
+			width: 182px;
+			height: 108px;
+			/*text-align: center;*/
+		}
+	</style>
+</head>
+<body>
+	<!-- <ul class="demo">
+		<li>one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+	</ul> -->
+	<div class="scroll">
+		<div class="wrap">
+			<ul>
+				<li><img src="img/1.jpg" alt=""></li>
+				<li><img src="img/2.jpg" alt=""></li>
+				<li><img src="img/3.jpg" alt=""></li>
+				<li><img src="img/4.jpg" alt=""></li>
+			</ul>
+		</div>
+	</div>
+	<script>
+	// var scroll = document.querySelector(".scroll");
+	var ul = document.querySelector(".wrap ul");
+	ul.innerHTML+=ul.innerHTML;//复制，追加
+	// console.log(ul);
+	var left = parseInt(ul.style.left)||0;
+	console.log(left)
+	//parseInt用于将.left转换成为整形
+	var imgWidth=document.querySelector(".wrap ul li img").offsetWidth;	
+		// ul.style.left="-"+imgWidth*4+"px";
+	setInterval(function(){
+		left--;
+		if (left<="-"+imgWidth*4) {
+			left=0
+		}
+		ul.style.left=left+"px";
+	},30)
+
+	
+	</script>
+</body>
+</html>

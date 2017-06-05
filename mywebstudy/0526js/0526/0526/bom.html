@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		body{
+			height: 1500px;
+		}
+	</style>
+</head>
+<body>
+<button class="btn">Button</button>
+<script type="text/javascript">
+	var btn=document.querySelector(".btn");
+	var timer=window.setInterval(function(){
+		console.log(new Date().toLocaleTimeString()+"a");
+	},1000)
+	/*var timer=window.setTimeout(function(){
+		console.log(new Date().toLocaleTimeString()+"a");
+	},3000);
+	console.log(timer);
+	var timer2=window.setTimeout(function(){
+		console.log(new Date().toLocaleTimeString()+"b");
+	},3000);*/
+	console.log(timer);
+	btn.addEventListener("click",function(){
+		clearTimeout(timer);
+	});
+	/*window.setInterval(function(){
+		console.log(new Date().toLocaleTimeString());
+	},1000);*/
+	/*name="tom";
+	console.log(window.name);*/
+	/*window.open("ad.html","newname","width=300,height=300,left=500,top=150,resizable=no");*/
+	//console.log(window);
+</script>
+</body>
+</html>

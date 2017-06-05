@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+		.demo{
+			width: 200px;
+			height: 100px;
+			border: 1px solid red;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -100px;
+			margin-top: -50px; 
+			line-height: 100px;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="demo">
+		<p id="pp">今天是</p>
+	</div>
+	<script>
+	var pp= document.getElementById("pp");
+		//console.log(pp);
+	var d=new Date();
+		weekday=d.getDay();
+	var week=new Array("日","一","二","三","四","五","六");
+	pp.innerHTML="周"+week[weekday];
+	</script>
+</body>
+</html>

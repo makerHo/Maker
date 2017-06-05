@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+	button{
+		width: 200px;
+		height: 30px;
+		background: purple;
+		color: white;
+		font-size: 16px;
+	}
+	button:after{
+		content:"";
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		border-radius: 5px;
+		/*border: 1px solid #fff;*/
+		/*box-shadow: 11px 0 #fff,22px 0 #fff,32px 0 #fff;*/
+		animation: dotting infinite 3s backwards step-start 
+	}
+	@keyframes dotting{
+		0%{
+			box-shadow: none;
+		}
+		30%{
+			box-shadow: none;
+		}
+		50%{
+			box-shadow: none;
+		}
+		70%{box-shadow: 11px 0 #fff}
+		90%{box-shadow: 11px 0 #fff,25px 0 #fff}
+		100%{box-shadow: 11px 0 #fff,25px 0 #fff,36px 0 #fff; }
+	}
+	</style>
+</head>
+<body>
+	<button >提交中</button>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<div class="demo"></div>
+<script>
+//获取div
+//根据选择器选择元素
+var demo=document.querySelector(".demo");
+//demo.innerHTML="tom";
+var d=new Date();
+var h=d.getHours();
+var m=d.getMinutes();
+var s=d.getSeconds();
+//数字在一起会自动运算
+demo.innerHTML=h+":"+m+":"+s;
+console.log(h);
+</script>

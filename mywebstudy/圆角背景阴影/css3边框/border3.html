@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style> 
+div
+{
+border:20px solid transparent;
+width:400px;
+height:300px;
+}
+
+#round
+{
+-moz-border-image:url(abc.png) ) 30  round;	/* Old Firefox */
+-webkit-border-image:url(abc.png)  30 round;	/* Safari and Chrome */
+-o-border-image:url(abc.png) )  30 round;		/* Opera */
+border-image:url(abc.png) )  30 round;
+}
+
+#stretch
+{
+-moz-border-image:url(border2.png)  26 stretch;	/* Old Firefox */
+-webkit-border-image:url(border.png)  26 stretch;	/* Safari and Chrome */
+-o-border-image:url(border2.png)  26 stretch;	/* Opera */
+border-image:url(border2.png)  26 stretch;
+}
+</style>
+</head>
+<body>
+
+<div id="round"><img src="abc2.jpg" width="400" height="300"></div>
+<br>
+<div id="stretch">在这里，图片被拉伸以填充该区域。</div>
+
+<p>这是我们使用的图片：</p>
+<img src="abc.png">
+
+<p><b>注释：</b> Internet Explorer 不支持 border-image 属性。</p>
+<p>border-image 属性规定了用作边框的图片。</p>
+
+</body>

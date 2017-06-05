@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="Tools.js"></script>
+</head>
+<body>
+<div class="clock">
+	<img src="digital/1.jpg">
+	<img src="digital/2.jpg">
+	<img src="digital/c.jpg">
+	<img src="digital/3.jpg">
+	<img src="digital/4.jpg">
+	<img src="digital/c.jpg">
+	<img src="digital/5.jpg">
+	<img src="digital/6.jpg">
+</div>
+<script type="text/javascript">
+var clock=document.querySelector(".clock");
+var imgs=document.querySelectorAll(".clock img");
+//console.log(imgs);
+setInterval(function(){
+	var d=new Date();
+	var h=addZero(d.getHours());
+	var m=addZero(d.getMinutes());
+	var s=addZero(d.getSeconds());
+	var str=h+"c"+m+"c"+s;
+	//clock.innerHTML=str;
+	console.log(str);
+	//每隔一秒钟循环8次，8个时间生成的路径分别
+	//赋给8张图片的src
+	for(var i=0;i<imgs.length;i++){
+		//console.log(imgs[i].src);
+		//114502
+		//console.log("digital/"+str.charAt(i)+".jpg");
+		imgs[i].src="digital/"+str.charAt(i)+".jpg";
+	}
+},1000);
+</script>
+</body>
+</html>

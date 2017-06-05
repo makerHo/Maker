@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8" />
+<title>css3边框阴影效果--艺灵设计,qq群:231749938</title>
+<meta name="author" content="艺灵设计,315800015@qq.com,yilingsj@gmail.com, www.yilingsj.com" />
+<meta name="keywords" content="css3边框阴影,内边框阴影,五彩边框阴影,box-shadow,css3属性,边框阴影兼容ie6">
+<meta name="description" content="css3边框阴影,内边框阴影,五彩边框阴影,box-shadow,css3属性,边框阴影兼容ie6">
+<style>
+div{width:300px; height:100px;border:1px solid #2cb7fe;font-size:14px;margin:30px;}
+.div1{-webkit-box-shadow:3px 3px 10px #9edeff;box-shadow:3px 3px 10px #9edeff inset;}
+.div2{-webkit-box-shadow:3px 3px 10px #9edeff inset;box-shadow:3px 3px 10px #9edeff inset;}
+
+</style>
+
+<!--
+下面来说下css3阴影的语法：
+box-shadow：none | <shadow> [ , <shadow> ]*
+<shadow> = inset? && [ <length>{2,4} && <color>? ]
+取值：
+none： 无阴影 
+<length>①： 第1个长度值用来设置对象的阴影水平偏移值。可以为负值 
+<length>②： 第2个长度值用来设置对象的阴影垂直偏移值。可以为负值 
+<length>③： 如果提供了第3个长度值则用来设置对象的阴影模糊值。不允许负值 
+<length>④： 如果提供了第4个长度值则用来设置对象的阴影外延值。可以为负值 
+<color>： 设置对象的阴影的颜色。 
+inset： 设置对象的阴影类型为内阴影。该值为空时，则对象的阴影类型为外阴影 
+
+-->
+
+</head>
+<body>
+<div class="div1">box-shadow:3px 3px 10px #9edeff;</div>
+<div class="div2">box-shadow:3px 3px 10px #9edeff inset;</div>
+
+<p>请在非<strong style="color:#f00">ie</strong>内核下浏览</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="font-size:16px;width:990px;margin:30px auto; line-height:32px;background: #fff;text-align: left; border:0">
+
+<p style=" line-height:32px; background-color:transparent">原文地址：<a href="http://www.yilingsj.com/css3/2013-08-04/70.html" title="css3边框阴影效果" target="_blank">http://www.yilingsj.com/css3/2013-08-04/70.html</a><br />
+
+兼容性：ie9+和webkit浏览器均支持<br />
+反馈：如若发现代码失效，可及时反馈到官网【<a href="http://www.yilingsj.com" title="艺灵设计--专注前端学习,前端知识分享,淘宝店铺装修代码"  target="_blank">www.yilingsj.com</a>】对应的文章评论中或者直接发我邮箱：315800015@qq.com，有助于艺灵及时更新最新代码。<br />
+代码复查时间：2014/10/11<br />
+
+</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img src="1.jpg">
+<script type="text/javascript">
+	var image=document.querySelector("img");
+	var num=1;
+	setInterval(function(){
+		//console.log(num);
+		image.src=num+".jpg";
+		num++;
+		//当num是5时，值为1；
+		if(num==5){
+			num=1;
+		}
+	},3000);
+</script>
+</body>
+</html>

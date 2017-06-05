@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			height: 300px;
+			width: 300px;
+		}
+	</style>
+</head>
+<body>
+<div class="demo"></div>
+	<!-- <img src="1.jpg" alt=""> -->
+	<button class="btn">button</button>
+	<script>
+	var demo=document.querySelector(".demo")
+	var d=new Date().toLocaleTimeString()
+	var btn=document.querySelector(".btn")
+	btn.addEventListener("click",function(){
+		clearTimeout(timer2)
+	})
+	 // name="takla";
+	 // console.log(window.name)
+	 // window.setInterval(function(){
+	 // 	console.log(d)
+	 // 	demo.innerHTML=d
+	 // },1000)
+	// var timer1= window.setTimeout(function(){
+	//  	console.log(timer1)
+	//  },1000)
+	var timer2= window.setInterval(function(){
+		console.log(timer2)
+	 },1000)
+	</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		.wrap{}
+		.demo{}
+		.demo ul{
+			/*border: 1px solid  blue;*/
+		}
+		.demo ul:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.demo ul li{
+			border: 1px solid red;
+			float: left;
+			width: 100px;
+			height: 50px;
+			margin-left: 20px;
+			cursor: pointer;
+		}
+		.demo ul li.active{
+			border: 2px solid purple;
+			position: relative;
+			top: 5px;
+			z-index: 10;
+			border-bottom: none;
+			background:#fff;
+		}
+		.demo ul li span{
+			height: 2px;
+			background: orange;
+			display:block;
+			width: 0;
+			transition: 1s;
+			margin: auto;
+		}
+		.demo ul li span.bar{
+			display: block;
+			width: 100%;
+			animation: barloading 1s forwards;
+		}
+		@keyframes barloading{
+			0%{
+				width: 0;
+				opacity: 0;
+			}
+			/*50%{
+				width: 100px;
+				opacity: 1;
+			}*/
+			100%{
+				width: 100%;
+				opacity: 1;
+			}
+		}
+		.box div{
+			height: 200px;
+			border: 2px solid purple;
+			display: block;
+			position: relative;
+			top: 3px;
+			z-index: 9;
+			display: none;
+		}
+		.box .chabox{
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="demo">
+			<ul>
+				<li class="active">
+					<span class="bar"></span>
+				</li>
+				<li>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+				</li>
+				<li>
+					<span></span>
+				</li>
+			</ul>
+		</div>
+		<div class="box">
+			<div class="chabox">one</div>
+			<div >two</div>
+			<div>three</div>
+			<div>four</div>
+		</div>
+	</div>
+	<script>
+		var lis=document.querySelectorAll(".demo ul li");
+		var divs=document.querySelectorAll(".box div");
+		var spans=document.querySelectorAll(".demo ul li span")
+		// lis.addEventListener("mouseover",function(){
+		console.log(spans.length);
+		// })
+		 lis.forEach(function(value,index){
+		 	value.addEventListener("mouseover",function(){
+		 		lis.forEach(function(v,i){
+		 			v.className="";
+		 			spans[i].className="";
+		 			divs[i].className="";
+		 		})
+		 		value.className="active";
+			divs[index].className="chabox";
+			spans[index].className="bar"
+		 	})
+		 })
+	</script>
+</body>
+</html>

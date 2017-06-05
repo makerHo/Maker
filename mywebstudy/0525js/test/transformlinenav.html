@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="feedback"></div>
+	<select name="optlist" id="g1">
+		<option value="leo">leo</option>
+		<option value="howard">howard</option>
+		<option value="bruce">bruce</option>
+		<option value="neo">neo</option>
+	</select>
+	<script>	
+		var select =document.querySelector("select");
+		var feedback =document.querySelector(".feedback");
+		select.addEventListener("change",function(){
+			feedback.innerHTML=this.value;
+		})
+	</script>
+</body>
+</html>

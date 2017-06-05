@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text"><br>
+	<script>
+	var input=document.querySelector("input");
+		input.addEventListener("foucs",function(){
+			this.style.bgColor="red"
+		});
+		input=addEventListener("blur",function(){
+			// this.style.background="red";
+			this.style.bgColor="#fff";
+		})
+	</script>
+</body>
+</html>

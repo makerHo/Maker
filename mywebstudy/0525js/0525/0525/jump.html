@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.pic{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+<a class="btn" href="1.jpg">Jump</a><br>
+<img src="1.jpg" class="pic">
+<script type="text/javascript">
+	var btn=document.querySelector(".btn");
+	var pic=document.querySelector(".pic");
+	btn.addEventListener("click",function(evt){
+		//禁止a的跳转
+		evt.preventDefault();
+		pic.style.display="block";
+	});
+</script>
+</body>
+</html>

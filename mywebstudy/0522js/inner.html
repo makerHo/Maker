@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrap{
+			width: 400px;
+			height: 400px;
+			border: 1px solid purple;
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<img src="img/02.jpg" alt="">
+	</div>
+	<script>
+	var wrap = document.querySelector(".wrap")
+	// console.log(wrap.innerHTML);
+	setInterval("changImg()",2000);
+	function changImg(){
+		wrap.innerHTML="<img src='img/01.jpg'>"
+	}
+	var img=wrap.querySelector("img");
+	console.log(img)
+	var num=1;
+	setInterval(function(){
+		// console.log(num);
+	img.src=	
+		num++;
+		if(num==5){
+			num=1
+		};
+
+	},3000)
+
+	</script>
+</body>
+</html>

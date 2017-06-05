@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.wrap{
+			border: 1px solid red;
+			margin:0;
+			padding: 0;
+			list-style: none;
+		}
+		.wrap:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.wrap li{
+			float: left;
+			padding: 10px;
+			background: #655422;
+			margin-left: 10px;
+			color: #c4c;
+			cursor:pointer;
+		}
+		li.active{
+			background: red;
+		}
+		.spotlight{
+			border: 1px solid green;
+			display: block;
+		}
+		div{
+			display:none;
+		}
+		/*.demo div:nth-child(1){}
+		.demo div:nth-child(2){}
+		.demo div:nth-child(3){}
+		.demo div:nth-child(4){}*/
+	</style>
+</head>
+<body>
+	<ul class="wrap">
+		<li class="active">one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+	</ul>
+	<div>one</div>
+	<div class="spotlight">two</div>
+	<div>three</div>
+	<div>one</div>
+<!-- 		<div></div>
+		<div></div>
+		<div></div>
+		<div></div> -->
+	
+	<script>
+	var lis=document.querySelectorAll(".wrap li");
+	//获取多个list
+	var spotlight=document.querySelector(".spotlight");
+	var divs=document.querySelectorAll("div");
+	//通过循环为目标元素
+	 lis.forEach(function(value,index){
+	 	value.addEventListener("click",function(){
+	 		// console.log(value)
+	 		lis.forEach(function(v,i){
+	 			v.className="";
+	 			divs[i].className="";
+	 		})
+	 		value.className="active";
+	 		divs[index].className="spotlight";
+
+	 	})
+	 })
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name=""><br>
+	<input type="text" name=""><br>
+	<input type="text" name=""><br>
+	<input type="text" name=""><br>
+	<input type="text" name=""><br>
+	<input type="text" name=""><br>
+	<script>
+	var inputs=document.querySelectorAll("input");
+		inputs.forEach(
+			function(value){
+			value.addEventListener("focus",function(){
+				this.style.background="lightyellow";
+			});
+			value.addEventListener("blur",function(){
+				this.style.background="#fff";
+			});
+		})
+	</script>
+</body>
+</html>

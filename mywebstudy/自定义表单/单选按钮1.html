@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*
+			 * 1、在input中,label中的for属性要与input中的id对应匹配；
+				2、隐藏默认的checkbox  visibility: hidden;
+				
+				3、给label做形状;(初始形状)
+				4、被点击后的变化：checked + label。
+				
+				6、用before伪类增加背景或者内容。注（不能少了content 定位)
+			 */
+body{background: #fff;}
+.wrap{width:190px;margin:0 auto;}
+.item{float:left;margin:10px;}
+.item label{display:block;width:50px;height:50px;background: orange;border-radius: 50%;
+	border:5px solid #ccc;box-shadow:1px 1px 1px #888 inset,1px 1px 1px #777;cursor: pointer;}
+#in1{visibility: hidden;}
+#in1+label{
+	
+	background:white url(img/boy.png) center no-repeat;
+	background-size:60%;
+
+}
+#in2{visibility: hidden;}
+#in2+label{
+	background:white url(img/girl.png) center no-repeat;
+	background-size:60%;
+}
+
+#in1:checked+label,#in2:checked+label{background-color: #ff9;}
+
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+		<h2>请选择性别</h2>
+			<div class="item">
+				<input type="radio" name="g1" id="in1" checked="checked" />
+				<label for="in1"></label>
+			</div>
+			<div class="item">
+				<input type="radio" name="g1" id="in2" value="" />
+				<label for="in2"></label>
+			</div>
+		</div>
+	</body>
+</html>

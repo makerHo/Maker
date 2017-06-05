@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!-- ====================== -->
+<form action="" name="g1">
+<input type="radio" id="i1" name="g1" onclick="red()"><label for="i1">red</label>
+<input type="radio" id="i2" name="g1" onclick="orange()"><label for="i2">orange</label>
+<div id="box1" class="box" onclick="divbg()" style="width:100px;height:100px;background: #eee;"></div>
+</form>
+<!-- ====================== -->
+</body>
+<script>
+
+//--------------------------------
+//标签增加新属性点击事件onclick="事情，任务"
+//文档的背景变成红色
+function orange(){
+	document.bgColor="orange";
+	box1.style.background="skyblue";
+	box1.style.width="200px";
+	box1.style.border="2px solid red";
+	box1.style.Position="left:100% top:0";
+}
+//--------------------------------
+
+function red(){
+	box1.style.background='red';
+}
+
+///-------------------------------
+/////-----------------------------
+</script>
+</html>
+

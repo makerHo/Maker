@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	var xhr =new XMLHttpRequest();
+	//声明xhr新的ajax方法
+	xhr.open("post","member.txt");
+	//xhr通过post方法链接memberxt
+	xhr.send(null);
+	//初始send状态为null
+	xhr.addEventListener("readystatechange",function(){
+		if (xhr.readstate==4) {
+			if (xhr.status==200) {
+				console.log(xhr.responseText)
+			}
+		}
+	})
+	</script>
+</body>
+</html>

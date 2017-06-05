@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+		body{
+			background: purple;
+		}
+		html{
+			background: #12c;
+		}
+		img{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<button class="btn">button</button>
+	<img src="img/1.jpg" alt="">
+	<script>
+		var btn=document.querySelector(".btn");
+		var img=document.querySelector("img");
+		var body=document.querySelector("body")
+		var html=document.querySelector("html")
+		html.addEventListener("click",msg)
+
+		function msg(){
+			console.log("hello")+"<br>"
+		}
+		// html.addEventListener("mouseover",function(){
+		// 	alert(2);//鼠标悬停事件
+		// })
+		// window.addEventListener("load",function(){
+		// 	alert(1);//窗体加载事件
+		// })
+		// window.addEventListener("load",function(){
+		// 	alert(2);
+		// })
+		// body.addEventListener("click",function(){
+		// 	console.log("hello")//点击事件
+		// })
+		// html.addEventListener("click",function(){
+		// 	console.log("你好！")
+		// })
+		// body.onclick=function(){
+		// 	alert(333);
+		// }
+
+		// img.onclick=disappear
+		// function disappear(){
+		// 	this.style.display="none";
+		// }
+
+		// btn.onclick=function(){
+		// 	// console.log(new Date().toLocaleTimeString())
+		// 	img.style.display="none";
+		// }
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<ul class="demo">
+	<li>one</li>
+	<li>two</li>
+	<li>three</li>
+	<li>four</li>
+</ul>
+<button class="btn">Button</button>
+<script>
+	var demo=document.querySelector(".demo")
+	var btn=document.querySelector(".btn")
+	btn.addEventListener("click",function(){//alert(demo.firstChild.nodeType);
+
+	if(demo.firstChild.nodeValue!="#text"){
+			demo.removeChild(demo.firstChild);
+		}
+		
+	});
+</script>
+</body>
+</html>

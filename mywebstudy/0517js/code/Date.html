@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div class="demo"></div>
+	<script>
+	//console.log(new Date());//时间对象处理的是用户本地的时间；并不是服务器时间；
+	//1.new Date();是一种常规的用法，用来获取
+	// var d=new Date();
+	// 	console.log(d);
+	// var d2=new Date(2018,0,10);
+	// 	console.log(d2);
+	var demo=document.querySelector(".demo");
+	var d=new Date();
+	 console.log(d);
+	 var d2=new Date(2048,10,10);
+	 console.log(d2);
+	 var d3=new Date();
+	 console.log(d.getFullYear());//获取年
+	 console.log(d.getMonth()+1);//获取月计算机月份是0~11，因此该值调用时，需要+1；
+	 console.log(d.getDate());//获取日
+	 console.log(d.getHours());//获取时
+	 console.log(d.getMinutes());//获取分
+	 console.log(d.getSeconds());//获取秒
+	 demo.innerHTML=d.getFullYear();
+
+	</script>
+</body>
+</html>

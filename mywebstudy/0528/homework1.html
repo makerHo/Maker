@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.wrap{
+			height: 800px;
+			width: 800px;
+			/*border: 1px solid red;*/
+			margin:0 auto;
+		}
+		.reg{
+			width: 100%;
+			height: 50px;
+			/*border: 1px solid blue;*/
+			box-sizing: border-box;
+			line-height: 50px;
+			margin-bottom: 5px;
+		}
+		.regLeft{
+			width: 49%;
+			height: 50px;
+			/*border: 1px solid green;*/
+			box-sizing: border-box;
+			float: left;
+			line-height: 50px;
+		}
+		.regLeft span{
+			display: inline-block;
+			width: 20%;
+			height: 50px;
+			text-align: center;
+		}
+		.reg .regRight1, .regRight2, .regRight3, .regRight4{
+			width: 49%;
+			height: 50px;
+			/*border: 1px solid red;*/
+			box-sizing: border-box;
+			float: right;
+		}
+		.regLeft input{
+			height: 30px;
+			width: 77%;
+			border: 1px solid #ddd;
+		}
+		#pic{
+			display: none;
+		}
+
+	</style>
+	<script src="tools.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="reg">
+			<div class="regLeft">
+				<span>用 户 名:</span>
+				<input type="text" id="username">
+			</div>
+			<div class="regRight1"></div>
+		</div>
+		<div class="reg">
+			<div class="regLeft">
+				<span>密&nbsp;&nbsp;码:</span>
+				<input type="password" id="pwd">
+			</div>
+			<div class="regRight2"></div>
+		</div>	
+		<div class="reg">
+			<div class="regLeft">
+				<span>确认密码:</span>
+				<input type="text" id="pwd">
+			</div>
+			<div class="regRight3"></div>
+		</div>	
+		<div class="reg">
+			<div class="regLeft">
+				<span>邮&nbsp;&nbsp;箱:</span>
+				<input type="text" id="email">
+			</div>
+			<div class="regRight4"></div>
+		</div>	
+			<div class="regbuttom">
+				<label for="pic">头&nbsp;&nbsp;像</label>
+				<input type="file" id="pic">
+				<span>点击选择靓照</span>
+			
+			<button>立即注册</button>
+		</div>		
+	</div>
+	<script>
+	var regRight1=document.querySelector(".regRight1");
+	var regRight2=document.querySelector(".regRight2");
+	var regRight3=document.querySelector(".regRight3");
+	var regRight4=document.querySelector(".regRight4");
+		var email=document.querySelector("#email");
+		var username=document.querySelector(".username")
+		var pwd= document.querySelector(".pwd")
+		 email.addEventListener("keyup",function(){
+			if (valide_email(email.value)) {
+		 		regRight4.innerHTML="邮箱格式合法"
+		 	}else{
+		 		regRight4.innerHTML="邮箱格式不合法"
+		 	}	
+		 })
+		username.addEventListener("blur",function(){
+			if(this.value.length==0){
+				regRight4.innerHTML="用户名不得为空";
+			}else{
+				regRight4.innerHTML="";
+			}
+		})
+		pwd.addEventListener("keyup",function(){
+			switch(valide_pwd(this.value)){
+				case 3:
+					regRight2.innerHTML="密码强度低"
+					break;
+				case 2:
+					regRight2.innerHTML="密码强度中"
+					break;
+				case 1:
+					regRight2.innerHTML="密码强度较高"
+					break;
+				case 0:
+					regRight2.innerHTML="密码强度高"
+					break;
+			}
+		})
+	var pic=document.querySelector("#pic");
+	var preview=document.querySelector("#preview");
+	var fr=new FileReader();
+	pic.addEventListener("change",function(){
+		fr.readAsDataURL(this.files[0]);
+		fr.addEventListener("loadend",function(){
+			preview.src=this.result;
+			console.log(this.result);
+		});
+	});
+
+	</script>
+</body>
+</html>

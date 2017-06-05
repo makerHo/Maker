@@ -1,0 +1,10 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector(".demo");
+var now=new Date();
+var future=new Date(2018,9,10);
+console.log(future.getTime());
+var span=future.getTime()-now.getTime();
+//相隔的天数
+demo.innerHTML=span/(1000*60*60*24);
+</script>

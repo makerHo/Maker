@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+		.wrap{
+			width: 200px;
+			height: 200px;
+			border: 1px solid red;
+			position: relative;
+		}
+		.wrap img{
+			width: 100%;
+			height: 80%;
+		}
+		.wrap button{
+			width: 50%;
+			margin-left: 50px; 
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	</style>
+</head>
+<body>
+<!-- 图片隐藏方案
+	1、更改图片的display属性；
+	2、更改图片透明度opacity
+	3、更改图片位置，后再次点击后初始化
+	4、给图片一个做Z-index，或者设置遮罩层
+	5、获取link的路径，并改变
+ -->
+	<div class="wrap">
+		<img src="4.jpg" alt="1">
+		<button>btn1</button>
+	</div>
+	<script>
+		var wrap=document.querySelector(".wrap");
+		var img=document.querySelector("img");
+		var btn=document.querySelector("button");
+		var arr=new Array(0,1);
+		btn.addEventListener("click",function(){
+			img.style.opacity=0
+			for (i=0;i<arr.length;i++) {
+				img.style.opacity=i;
+			}
+		})
+
+	</script>
+</body>
+</html>

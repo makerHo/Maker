@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+ </head>
+ <body>
+  <button class="btn">Button</button>
+  <script>//gender:性别 //female女性的，柔弱的
+	btn.onclick=function(){
+		window.resizeBy(-15,-15);//每次递减12px在x和y轴
+	}
+  </script>
+ </body>
+</html>

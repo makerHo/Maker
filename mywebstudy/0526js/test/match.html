@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	//捕获性分组
+	var str="google,baidu";
+	var pattern=/(goo)(gle),(baidu)/gi;
+	console.log(str.match(pattern));
+	
+	// var str="only";
+	// var pattern=/^o[n]{2,5}}ly$/gi
+	// console.log(pattern.test(str));
+	//var pattern=//
+	// \s代表空格
+	// \. \表示转义,表示将.转换为普通的点
+	// var pattern=/./gi //匹配非空任意字符
+	// var pattern=/[\w]/
+	// var pattern=/[0-9a-zA-Z]/gi
+	// var pattern=/[/D]/ //[/d]表示非数值
+	//var pattern=/[0-9]/gi //同下可以简写为[/d]
+	//var pattern=/[a-z]/gi //表示[a-z][A-Z]范围
+	//var pattern=/[^a]/gi//[^a]表示排除a才符合
+	//var pattern=/[a]/gi;//[]中只要符合符合的就全部都符合，里面代表一个字符
+	// var pattern=/i$/gi
+	// var pattern=/^s/
+	// var pattern=/^shanghais$/
+	//g表示在全局寻找匹配的字符
+	// console.log(pattern.exec(str));
+	// console.log(str.match(pattern));
+	// console.log(str.search(pattern))
+	// console.log(str.replace(pattern,"不可描述"))
+	// console.log(pattern.test(str))//匹配字符串中陪陪的结果
+	// g 表示在全局寻找匹配的字符
+	//i表示的是大小写不敏感
+	//search：str.search(pattern)；返回搜索目标中的第一个匹配的字符串的索引
+	// ^表示行首字符标识符
+	// $表示在行尾开始查找
+	// ^+""+$表示全匹配 
+	</script>
+</body>
+</html>

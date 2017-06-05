@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>蚂蚁旅行</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrap">	
+		<div id="zhzo"></div>
+		<div class="header">
+			<div class="headerTop">
+				<div class="headerTopLeft">
+					<ul>
+						<li><a href="#1">首页</a></li>
+						<li><a href="#1">目的地</a></li>
+						<li><a href="#1">旅游攻略</a></li>
+						<li><a href="#1">自由行商城<a></li>
+						<li><a href="#1">酒店</a></li>
+						<li><a href="#1">社区</a></li>
+						<li><a href="#1">APP</a></li>
+					</ul>
+				</div>
+				<div class="headerTopRight">
+						<span><a href="#2">登录</a>&nbsp; </span>
+						<!-- <span>|</span> -->
+						<span><a href="#3">注册</a></span>
+				</div>
+			</div>
+			<div class="headerBottom">
+				<div><img src="image/banner_2.jpeg" alt=""></div>
+			</div>
+		<div id="login">
+			<div class="loginTop">
+				<form action="">
+					<input type="text" placeholder="您的邮箱/手机号">
+					<input type="password" placeholder="您的密码">
+				</form>
+				<div class="loginTopBtm">
+					<div class="misspwd"><a href="">忘记密码</a> </div>
+					<div class="loginTopBtn"><button>登录</button></div>
+				</div>
+			</div>
+			<div class="hr"></div>
+			<div class="loginBottom">
+				<div class="hezuo"><p>用合作网站账户直接登录</p> </div>
+				<div class="loginBottomul">
+					<ul>
+						<li>
+							<span><img src="icon/sina.png" alt=""></span>
+							<p>新浪微博</p>
+						</li>
+						<li>
+							<span><img src="icon/QQ.png" alt=""></span>
+							<p>QQ</p>
+						</li>
+						<li>
+							<span><img src="icon/wechat.png" alt=""></span>
+							<p>微信</p>
+						</li>
+						<li>
+							<span><img src="icon/taobao.png" alt=""></span>
+							<p> 淘宝网</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="active"></div>
+		<div class="footer"></div>
+	</div>
+</body>
+<script src="tools.js"></script>
+<script>
+	var login=document.querySelector("#login");
+	var zhzo=document.querySelector("#zhzo");
+
+	
+	zhzo.style.width=document.body.clientWidth+"px";
+	zhzo.style.height=document.body.clientHeight+"px";
+	//window.addEventListener("load",function(){login});
+	var spa = document.querySelector(".headerTopRight span a");
+		// console.log(spa)
+		spa.addEventListener("click",function(){
+			zhzo.style.display="block";
+			login.style.display="block";
+			elementCenter(login);
+		})
+</script>
+</html>

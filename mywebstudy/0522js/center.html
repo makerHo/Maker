@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0;
+		padding:0;
+	}
+	body{
+		height: 1000px;
+	}
+		.demo{
+			height: 500px;
+			width: 80px;
+			border: 1px solid red;
+			position: absolute;
+			background: red;
+			z-index: 1111;
+
+
+		}
+		.demo1{
+			height: 80px;
+			width: 500px;
+			/*border: 1px solid red;*/
+			position: absolute;
+			background:green;
+
+		}.demo3{
+			height:500px;
+			width: 500px;
+			/*border: 1px solid red;*/
+			border-radius: 500px;
+			position: absolute;
+
+		}.demo2{
+			height:200px;
+			width: 200px;
+			/*border: 1px solid red;*/
+			border-radius: 200px;
+			position: absolute;
+			background: blue;
+
+		}
+	</style>
+	<script src="js/tools.js"></script>
+</head>
+<body>
+	<div class="demo"></div>
+<!-- 	<div class="demo1"></div>
+	<div class="demo2"></div>
+	<div class="demo3"></div> -->
+	<script>
+	window.addEventListener("scroll",function(){
+	var demo=document.querySelector(".demo")
+	elementCenter(demo);
+	});
+	window.addEventListener("resize",function(){
+	var demo=document.querySelector(".demo")
+	elementCenter(demo);	
+	});
+	window.addEventListener("load",function(){
+	var demo=document.querySelector(".demo")
+	elementCenter(demo);	
+	});
+	</script>	
+	<img src="img/02.jpg" alt="">
+</body>
+</html>

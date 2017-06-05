@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script>
+document.write(new Date().toLocaleTimeString());
+</script>
+<button class="btn">button</button>
+	<script>
+	var btn=document.querySelector("button")
+	btn.addEventListener("click",function(){
+		// location.reload();//刷新
+		location.href="http://www.baidu.com"//类似于a的跳转，但是不能打开新窗口
+	})
+	console.log(location);
+	console.log(location.href);
+	console.log(location.port);
+	console.log(location.pathname);
+	console.log(location.host);
+	console.log(location.protocol);
+	console.log(location.search);
+	</script>
+</body>
+</html>

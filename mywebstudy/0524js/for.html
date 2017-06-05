@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+	}
+		.demo{
+			border: 1px solid red;
+
+		}
+		.demo li{
+			float: left;
+			padding: 10px;
+			background: #114;
+			color: #ab1;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		ul:after{
+			content: "";
+			clear: both;
+			display: block;
+		}
+		 li.active{
+			background: red;
+		}
+		.wrap{
+			color: red;
+			border: 1px solid red;
+			display: block;
+
+		}
+		div{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<ul class="demo">
+		<li class="active">one</li>
+		<li>two</li>
+		<li>three</li>
+		<li>four</li>
+	</ul>
+	<div class="wrap">one</div>
+	<div>two</div>
+	<div>three</div>
+	<div>fou</div>
+	<script>
+		var lis=document.querySelectorAll(".demo li");
+		//获取多个元素绑定事件
+		var wrap=document.querySelector(".wrap")
+		var divs=document.querySelectorAll("div")
+			for (var i = 0; i < lis.length; i++) {
+				//循环为每一个list添加index
+				lis[i].setAttribute("index",i);
+				lis[i].addEventListener("click",function(){
+					for (var j = 0; j < lis.length; j++) {
+						lis[j].className="";
+						divs[j].className="";
+					}
+					this.className="active";
+					divs[this.getAttribute("index")].className="wrap";
+				});
+			};
+	</script>
+</body>
+</html>

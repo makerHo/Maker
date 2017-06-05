@@ -1,0 +1,9 @@
+<div class="demo"></div>
+<script>
+var demo=document.querySelector('.demo')//元素获取器querySelector();
+
+var now=new Date();//声明一个now=new Date(); 
+var future=new Date(2018,9,10);//定义目标日期
+var span=future.getTime()-now.getTime();//span 是用来 
+demo.innerHTML=span/(1000*60*60*24);
+</script>
